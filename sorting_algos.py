@@ -1,4 +1,5 @@
 arr = [12,43,13,34,41,33]
+# timecomplexity: O(n)2
 
 n = len(arr)
 
