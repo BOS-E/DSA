@@ -68,5 +68,16 @@ def pattern22(n):
             print(n-(min(min(top,bottom), min(right,left))), end=' ')
         print()
 
-pattern22(9)
+def pattern23(n):
+    for i in range(n):
+        for j in range(n-i-1):
+            print(' ', end = '')
+        for j in range(n):
+            print('*', end='')
+        for j in range(i):
+            print(' ', end = '')
+        print()
+            
+
+pattern22(3)
 

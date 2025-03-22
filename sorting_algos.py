@@ -1,15 +1,23 @@
-arr = [12,43,13,34,41,33]
-# timecomplexity: O(n)2
+def selection_sort():
+    # select the minimum and swap
+    # no need to pass array. changes are permanent.
+    for i in range(n):
+        for j in range(i,n):
+            if arr[i]>arr[j]:
+                arr[i],arr[j]=arr[j],arr[i]
+            
 
-n = len(arr)
-
-def bubble_sort(arr, n):
+def bubble_sort():
+    # push max to the end by swapping the adjacent elements.
+    swaps = 0
     for j in range(n):
         for i in range(n-1-j):
             if arr[i] > arr[i+1]:
                 arr[i], arr[i+1] = arr[i+1],arr[i]
-    return arr
-
+                swaps+=1 # for best case scenario ie already ascending
+        if swaps==0:
+            return
+        
 def bubble_sort2(arr,n):
     for j in range(n-1, 0, -1):
         for i in range(j):
@@ -17,8 +25,11 @@ def bubble_sort2(arr,n):
                 arr[i], arr[i+1] = arr[i+1],arr[i]    
     return arr    
 
-def fn(n): 
-    for i in range(n, 0, -1):
-        print(i)
+def insertion_sort():
+    pass
 
-print(bubble_sort2(arr,n))
+
+arr = [13, 15, 33, 34, 41, 43]
+n=len(arr)
+bubble_sort()
+print(arr)
