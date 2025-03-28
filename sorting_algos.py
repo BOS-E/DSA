@@ -22,14 +22,24 @@ def bubble_sort2(arr,n):
     for j in range(n-1, 0, -1):
         for i in range(j):
             if arr[i] > arr[i+1]:
-                arr[i], arr[i+1] = arr[i+1],arr[i]    
-    return arr    
+                arr[i], arr[i+1] = arr[i+1],arr[i]      
 
 def insertion_sort():
-    pass
+    # take an next element and put in the correct location.
+    swaps=0
+    for i in range(1, n):
+        for j in range(i,0,-1):
+            if arr[j] < arr[j-1]:
+                arr[j], arr[j-1] = arr[j-1], arr[j]  
+                swaps+=1
+        if swaps==0:
+            return
 
-
-arr = [13, 15, 33, 34, 41, 43]
+def merge_sort():
+    n = len(arr)
+    arr1=arr[:n//2]
+    arr2 = arr[n//2:]
+    print(arr1,arr2)
+arr = [33, 13,99,5, 43, 34, 41]
 n=len(arr)
-bubble_sort()
-print(arr)
+merge_sort()
